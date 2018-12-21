@@ -189,17 +189,13 @@
             this.cbeColumn.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbeColumn.Properties.Items.AddRange(new object[] {
-            "TIEN_CUOI",
             "TIEN_NHAP",
             "TIEN_NHAPTRA",
-            "TIEN_NHAPKHAC",
             "TIEN_NHAPVC",
             "TIEN_XUAT",
             "TIEN_XUATTRA",
-            "TIEN_XUATKHAC",
-            "TIEN_XUATHUY",
             "TIEN_XUATVC",
-            "TIEN_DAU"});
+            "TIEN_CUOI"});
             this.cbeColumn.Size = new System.Drawing.Size(84, 20);
             this.cbeColumn.TabIndex = 7;
             // 
