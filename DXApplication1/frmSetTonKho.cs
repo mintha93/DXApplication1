@@ -33,7 +33,7 @@ namespace DXApplication1
                 grvBefore.Columns.Clear();
                 gridAfter.DataSource = null;
                 grvAfter.Columns.Clear();
-                gridBefore.DataSource = _BUS.getTonKho(Convert.ToInt16(cbeKy.Text), Convert.ToInt16(cbeNam.Text), Convert.ToInt16(textMakho.Text), cbeColumn.Text, Convert.ToInt16(cbeTanggiam.Text), Convert.ToInt16(textSodong.Text));
+                gridBefore.DataSource = _BUS.getTonKho(Convert.ToInt16(cbeKy.Text), Convert.ToInt16(cbeNam.Text), Convert.ToInt16(textMakho.Text), cbeColumn.Text, Convert.ToInt16(cbeTanggiam.Text), Convert.ToInt16(textSodong.Text), Convert.ToDouble(txtSothuc.Text));
                 btnSumtotal.Text = _BUS.getSumTotal(cbeColumn.Text, Convert.ToInt16(cbeKy.Text), Convert.ToInt16(cbeNam.Text), Convert.ToInt16(textMakho.Text)).ToString();
             }
             catch (Exception ex)
@@ -46,19 +46,19 @@ namespace DXApplication1
         {
             gridAfter.DataSource = null;
             grvAfter.Columns.Clear();
-            gridAfter.DataSource = _BUS.getTonKho(Convert.ToInt16(cbeKy.Text), Convert.ToInt16(cbeNam.Text), Convert.ToInt16(textMakho.Text), cbeColumn.Text, Convert.ToInt16(cbeTanggiam.Text), Convert.ToInt16(textSodong.Text));
+            gridAfter.DataSource = _BUS.getTonKho(Convert.ToInt16(cbeKy.Text), Convert.ToInt16(cbeNam.Text), Convert.ToInt16(textMakho.Text), cbeColumn.Text, Convert.ToInt16(cbeTanggiam.Text), Convert.ToInt16(textSodong.Text),Convert.ToDouble(txtSothuc.Text));
 
             string column3 = grvAfter.Columns[2].ToString();
             if (cbeTanggiam.Text =="0")
                 for (int i = 0; i < grvAfter.DataRowCount; i++)
                 {
-                    Double val = Convert.ToDouble(grvAfter.GetRowCellValue(i, column3)) - 0.4;
+                    Double val = Convert.ToDouble(grvAfter.GetRowCellValue(i, column3)) - Convert.ToDouble(txtSothuc.Text);
                     grvAfter.SetRowCellValue(i, column3, val);
                 }
             else if (cbeTanggiam.Text == "1")
                 for (int i = 0; i < grvAfter.DataRowCount; i++)
                 {
-                    Double val = Convert.ToDouble(grvAfter.GetRowCellValue(i, column3)) + 0.4;
+                    Double val = Convert.ToDouble(grvAfter.GetRowCellValue(i, column3)) + Convert.ToDouble(txtSothuc.Text);
                     grvAfter.SetRowCellValue(i, column3, val);
                 }
         }

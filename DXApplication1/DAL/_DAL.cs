@@ -14,7 +14,7 @@ namespace DXApplication1.DAL
     class _DAL
     {
         SqlConnection _conn = null;
-        public DataTable getTonKho(int Ky, int Nam, int Makho, string Column, int Tanggiam, int Sodong)
+        public DataTable getTonKho(int Ky, int Nam, int Makho, string Column, int Tanggiam, int Sodong,Double Sothuc)
         {
             _conn = ConSQL.getConnect();
             SqlCommand cmd = new SqlCommand("GET_SETTONKHO", _conn);
@@ -31,6 +31,8 @@ namespace DXApplication1.DAL
             cmd.Parameters["@Tanggiam"].Value = Tanggiam;
             cmd.Parameters.Add("@Sodong", SqlDbType.Int);
             cmd.Parameters["@Sodong"].Value = Sodong;
+            cmd.Parameters.Add("@Sothuc", SqlDbType.Float);
+            cmd.Parameters["@Sothuc"].Value = Sothuc;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);

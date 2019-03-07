@@ -38,19 +38,11 @@ namespace DXApplication1
         private void grvPDC_DoubleClick(object sender, EventArgs e)
         {
             xtraTabControl1.SelectedTabPage = xtpPDC_CT;
-
             gridCtrlPDC_CT.DataSource = _BUS.getPDC_CT(grvPDC.GetFocusedRowCellDisplayText("KHOA"));
         }
         private void xtraTabControl1_SelectedPageChanged(object sender, EventArgs e)
         {
-            //if (xtraTabControl1.SelectedTabPageIndex == 1)
-            //{
-            //    xtraTabControl1.SelectedTabPage = xtpPDC_CT;
-            //    gridCtrlPDC_CT.DataSource = _BUS.getPDC_CT(grvPDC.GetFocusedRowCellDisplayText("KHOA"));
-            //}
-            //else if (xtraTabControl1.SelectedTabPageIndex == 0)
-            //{
-            //}
+          
         }
 
 
@@ -117,10 +109,7 @@ namespace DXApplication1
         private void oFD_FileOk(object sender, CancelEventArgs e)
         {
             addressFile = oFD.FileName;
-          //  txtFileName.Text = addressFile.Substring(addressFile.LastIndexOf(@"\") + 1);
             List<string> sheets = getListSheet(addressFile);
-          //  danhSachSheet.DataSource = sheets;
-
         }
 
         private void btnModify_Click(object sender, EventArgs e)
@@ -176,5 +165,7 @@ namespace DXApplication1
             grvPDC.Columns.Clear();
             gridCtrlPDC.DataSource = _BUS.getPDC(dePDC1.DateTime.ToString("yyyy-MM-dd"), dePDC2.DateTime.ToString("yyyy-MM-dd"));
         }
+
+
     }
 }

@@ -51,6 +51,8 @@
             this.grvAfter = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridBefore = new DevExpress.XtraGrid.GridControl();
             this.grvBefore = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.txtSothuc = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSumtotal.Properties)).BeginInit();
@@ -65,12 +67,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.grvAfter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridBefore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvBefore)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSothuc.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
             // 
             this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl1.Controls.Add(this.labelControl8);
+            this.panelControl1.Controls.Add(this.txtSothuc);
             this.panelControl1.Controls.Add(this.btnSumtotal);
             this.panelControl1.Controls.Add(this.labelControl7);
             this.panelControl1.Controls.Add(this.labelControl6);
@@ -322,6 +327,22 @@
             this.grvBefore.GridControl = this.gridBefore;
             this.grvBefore.Name = "grvBefore";
             // 
+            // txtSothuc
+            // 
+            this.txtSothuc.EditValue = "0.4";
+            this.txtSothuc.Location = new System.Drawing.Point(52, 62);
+            this.txtSothuc.Name = "txtSothuc";
+            this.txtSothuc.Size = new System.Drawing.Size(53, 20);
+            this.txtSothuc.TabIndex = 18;
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Location = new System.Drawing.Point(11, 65);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(37, 13);
+            this.labelControl8.TabIndex = 19;
+            this.labelControl8.Text = "Số thực";
+            // 
             // frmSetTonKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -346,6 +367,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grvAfter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridBefore)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvBefore)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSothuc.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -375,5 +397,7 @@
         private DevExpress.XtraGrid.Views.Grid.GridView grvAfter;
         private DevExpress.XtraEditors.TextEdit btnSumtotal;
         private DevExpress.XtraEditors.LabelControl labelControl7;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
+        private DevExpress.XtraEditors.TextEdit txtSothuc;
     }
 }

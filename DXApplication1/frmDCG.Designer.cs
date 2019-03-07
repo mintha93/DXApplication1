@@ -1,4 +1,6 @@
-﻿namespace DXApplication1
+﻿using System;
+
+namespace DXApplication1
 {
     partial class frmDCG
     {
@@ -161,7 +163,7 @@
             // 
             // dePDC2
             // 
-            this.dePDC2.EditValue = new System.DateTime(2018, 12, 4, 14, 19, 29, 788);
+            this.dePDC2.EditValue = DateTime.Now;
             this.dePDC2.Location = new System.Drawing.Point(278, 65);
             this.dePDC2.Name = "dePDC2";
             this.dePDC2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -174,7 +176,7 @@
             // 
             // dePDC1
             // 
-            this.dePDC1.EditValue = new System.DateTime(2018, 11, 4, 0, 0, 0, 0);
+            this.dePDC1.EditValue = DateTime.Now.AddDays(-30);
             this.dePDC1.Location = new System.Drawing.Point(278, 28);
             this.dePDC1.Name = "dePDC1";
             this.dePDC1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {

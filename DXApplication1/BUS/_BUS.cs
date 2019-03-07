@@ -11,9 +11,9 @@ namespace DXApplication1.BUS
     class _BUS
     {
         _DAL _DAL = new _DAL();
-        public DataTable getTonKho(int Ky, int Nam, int Makho, string Column, int Tanggiam, int Sodong)
+        public DataTable getTonKho(int Ky, int Nam, int Makho, string Column, int Tanggiam, int Sodong, Double Sothuc)
         {
-            return _DAL.getTonKho(Ky, Nam, Makho, Column, Tanggiam, Sodong);
+            return _DAL.getTonKho(Ky, Nam, Makho, Column, Tanggiam, Sodong, Sothuc);
         }
         public void updateTonkho(Double Tiennhap, Int64 KHOA, Int64 MAVT, string Column)
         {
